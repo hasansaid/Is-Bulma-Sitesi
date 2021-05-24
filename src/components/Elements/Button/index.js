@@ -1,5 +1,9 @@
 import './style.css';
 
-export default function Button({ children }) {
-  return <button className="button">{children}</button>;
+export default function Button({ type, block, children }) {
+  return (
+    <button className={`btn btn-${type} ${block ? 'btn-block' : ''}`}>
+      {children}
+    </button>
+  );
 }

@@ -1,0 +1,7 @@
+.subscribe__email {
+  @apply bg-white shadow-sm p-3 rounded-md space-y-3;
+}
+
+.subscribe__email--text {
+  @apply text-gray-600 leading-5;
+}
