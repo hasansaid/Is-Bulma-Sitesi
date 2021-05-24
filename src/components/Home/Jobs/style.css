@@ -1,0 +1,7 @@
+.jobs-list {
+  @apply bg-white shadow-sm rounded-md overflow-hidden;
+}
+
+.jobs-list .job:not(:last-child) {
+  @apply border-b border-gray-100;
+}
