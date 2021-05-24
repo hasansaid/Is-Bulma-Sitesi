@@ -1,4 +1,4 @@
-import './index.css';
+import './style.css';
 import Navbar from '../Navbar';
 
 export default function Layout({ children }) {

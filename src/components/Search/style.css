@@ -1,0 +1,16 @@
+.search-box {
+  @apply px-6 py-4 flex items-center rounded-md bg-gradient-to-r text-white from-blue-500 to-blue-600;
+}
+
+.search__inputs {
+  @apply flex flex-1;
+}
+
+.search__inputs input {
+  @apply flex-1;
+}
+
+.search__inputs input,
+.search__inputs input:not(:last-child) {
+  @apply mr-2;
+}
