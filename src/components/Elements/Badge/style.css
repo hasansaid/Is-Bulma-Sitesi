@@ -1,0 +1,7 @@
+.badge {
+  @apply bg-white mx-2;
+}
+
+.badge-red {
+  @apply text-white bg-red-500 px-2 py-1 rounded-md text-sm;
+}
