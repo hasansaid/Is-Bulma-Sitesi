@@ -1,9 +1,10 @@
 import './style.css';
 
 export default function Button({ type, block, children }) {
-  return (
-    <button className={`btn btn-${type} ${block ? 'btn-block' : ''}`}>
-      {children}
-    </button>
-  );
+  const classes = ['btn'];
+
+  if (type) classes.push(`btn-${type}`);
+  if (block) classes.push('btn-block');
+
+  return <button className={classes.join(' ')}>{children}</button>;
 }

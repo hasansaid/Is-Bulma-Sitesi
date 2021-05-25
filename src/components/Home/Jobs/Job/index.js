@@ -3,10 +3,13 @@ import Button from '../../../Elements/Button';
 import Badge from '../../../Elements/Badge';
 
 export default function Job({ name, location, contract, remote, immediate }) {
+  const job_title_classes = ['job__title'];
+  if (immediate) job_title_classes.push('immediate');
+
   return (
     <li className="job">
       <div className="job__content">
-        <h2 className={`job__title ${immediate ? 'immediate' : ''}`}>
+        <h2 className={job_title_classes.join(' ')}>
           {name}
           {immediate && <Badge color="red">immediate</Badge>}
         </h2>
