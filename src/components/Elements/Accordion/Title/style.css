@@ -1,5 +1,5 @@
 .accrodion__title {
-  @apply p-3 flex items-center select-none cursor-pointer text-gray-800 hover:bg-gray-100;
+  @apply p-3 flex items-center select-none cursor-pointer text-gray-800;
 }
 
 .accrodion__title.open .accrodion__title--icon {

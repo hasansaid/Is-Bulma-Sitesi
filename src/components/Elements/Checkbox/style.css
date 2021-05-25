@@ -1,0 +1,7 @@
+.checkbox {
+  @apply flex items-center space-x-2;
+}
+
+.checkbox__label {
+  @apply flex-1;
+}
