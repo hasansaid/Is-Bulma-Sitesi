@@ -6,6 +6,11 @@ import Checkbox from '../../../Elements/Checkbox';
 export default function Level() {
   const [open, setOpen] = useState(true);
 
+  const [internship, setInternship] = useState(false);
+  const [junior, setJunior] = useState(false);
+  const [senior, setSenior] = useState(false);
+  const [cto, setCto] = useState(false);
+
   return (
     <Accrodion.Group>
       <Accrodion.Title open={open} click={() => setOpen(!open)}>
@@ -26,10 +31,22 @@ export default function Level() {
         <p>Experience level</p>
       </Accrodion.Title>
       <Accrodion.Content open={open}>
-        <Checkbox name="level__internship" label="Internship" />
-        <Checkbox name="level__junior" label="Junior" />
-        <Checkbox name="level__senior" label="Senior" />
-        <Checkbox name="level__cto" label="CTO" />
+        <Checkbox
+          label="Internship"
+          checked={internship}
+          change={() => setInternship(!internship)}
+        />
+        <Checkbox
+          label="Junior"
+          checked={junior}
+          change={() => setJunior(!junior)}
+        />
+        <Checkbox
+          label="Senior"
+          checked={senior}
+          change={() => setSenior(!senior)}
+        />
+        <Checkbox label="CTO" checked={cto} change={() => setCto(!cto)} />
       </Accrodion.Content>
     </Accrodion.Group>
   );

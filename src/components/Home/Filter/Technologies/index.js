@@ -6,6 +6,17 @@ import Checkbox from '../../../Elements/Checkbox';
 export default function Technologies() {
   const [open, setOpen] = useState(true);
 
+  const [backend, setBackend] = useState(false);
+  const [frontend, setFrontend] = useState(false);
+  const [mobile, setMobile] = useState(false);
+  const [javascript, setJavaScript] = useState(false);
+  const [react, setReact] = useState(false);
+  const [python, setPython] = useState(false);
+  const [php, setPhp] = useState(false);
+  const [csharp, setCsharp] = useState(false);
+  const [java, setJava] = useState(false);
+  const [linux, setLinux] = useState(false);
+
   return (
     <Accrodion.Group>
       <Accrodion.Title open={open} click={() => setOpen(!open)}>
@@ -26,16 +37,48 @@ export default function Technologies() {
         <p>Technologies</p>
       </Accrodion.Title>
       <Accrodion.Content open={open}>
-        <Checkbox name="technology__backend" label="Backend" />
-        <Checkbox name="technology__frontend" label="Frontend" />
-        <Checkbox name="technology__mobile" label="Mobile" />
-        <Checkbox name="technology__javascript" label="JavaScript" />
-        <Checkbox name="technology__react" label="Recat" />
-        <Checkbox name="technology__python" label="Python" />
-        <Checkbox name="technology__php" label="PHP" />
-        <Checkbox name="technology__csharp" label="C#" />
-        <Checkbox name="technology__java" label="Java" />
-        <Checkbox name="technology__linux" label="Linux" />
+        <Checkbox
+          label="Backend"
+          checked={backend}
+          change={() => setBackend(!backend)}
+        />
+        <Checkbox
+          label="Frontend"
+          checked={frontend}
+          change={() => setFrontend(!frontend)}
+        />
+        <Checkbox
+          label="Mobile"
+          checked={mobile}
+          change={() => setMobile(!mobile)}
+        />
+        <Checkbox
+          label="JavaScript"
+          checked={javascript}
+          change={() => setJavaScript(!javascript)}
+        />
+        <Checkbox
+          label="React"
+          checked={react}
+          change={() => setReact(!react)}
+        />
+        <Checkbox
+          label="Python"
+          checked={python}
+          change={() => setPython(!python)}
+        />
+        <Checkbox label="PHP" checked={php} change={() => setPhp(!php)} />
+        <Checkbox
+          label="C#"
+          checked={csharp}
+          change={() => setCsharp(!csharp)}
+        />
+        <Checkbox label="Java" checked={java} change={() => setJava(!java)} />
+        <Checkbox
+          label="Linux"
+          checked={linux}
+          change={() => setLinux(!linux)}
+        />
       </Accrodion.Content>
     </Accrodion.Group>
   );

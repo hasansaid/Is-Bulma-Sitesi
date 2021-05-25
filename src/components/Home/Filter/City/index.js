@@ -6,6 +6,11 @@ import Checkbox from '../../../Elements/Checkbox';
 export default function City() {
   const [open, setOpen] = useState(true);
 
+  const [tehran, setTehran] = useState(false);
+  const [esfahan, setEsfahan] = useState(false);
+  const [shiraz, setShiraz] = useState(false);
+  const [other, setOther] = useState(false);
+
   return (
     <Accrodion.Group>
       <Accrodion.Title open={open} click={() => setOpen(!open)}>
@@ -32,10 +37,26 @@ export default function City() {
         <p>City</p>
       </Accrodion.Title>
       <Accrodion.Content open={open}>
-        <Checkbox name="city__tehran" label="Tehran" />
-        <Checkbox name="city__Esfahan" label="Esfahan" />
-        <Checkbox name="city__shiraz" label="Shiraz" />
-        <Checkbox name="city__other" label="Other" />
+        <Checkbox
+          label="Tehran"
+          checked={tehran}
+          change={() => setTehran(!tehran)}
+        />
+        <Checkbox
+          label="Esfahan"
+          checked={esfahan}
+          change={() => setEsfahan(!esfahan)}
+        />
+        <Checkbox
+          label="Shiraz"
+          checked={shiraz}
+          change={() => setShiraz(!shiraz)}
+        />
+        <Checkbox
+          label="Other"
+          checked={other}
+          change={() => setOther(!other)}
+        />
       </Accrodion.Content>
     </Accrodion.Group>
   );

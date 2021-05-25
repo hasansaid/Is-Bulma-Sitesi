@@ -6,6 +6,10 @@ import Checkbox from '../../../Elements/Checkbox';
 export default function Type() {
   const [open, setOpen] = useState(true);
 
+  const [fulltime, setFulltime] = useState(false);
+  const [parttime, setParttime] = useState(false);
+  const [project, setProject] = useState(false);
+
   return (
     <Accrodion.Group>
       <Accrodion.Title open={open} click={() => setOpen(!open)}>
@@ -26,9 +30,21 @@ export default function Type() {
         <p>Type of cooperation</p>
       </Accrodion.Title>
       <Accrodion.Content open={open}>
-        <Checkbox name="type__fulltime" label="Fulltime" />
-        <Checkbox name="type__parttime" label="Parttime" />
-        <Checkbox name="type__project" label="Project" />
+        <Checkbox
+          label="Fulltime"
+          checked={fulltime}
+          change={() => setFulltime(!fulltime)}
+        />
+        <Checkbox
+          label="Parttime"
+          checked={parttime}
+          change={() => setParttime(!parttime)}
+        />
+        <Checkbox
+          label="Project"
+          checked={project}
+          change={() => setProject(!project)}
+        />
       </Accrodion.Content>
     </Accrodion.Group>
   );
