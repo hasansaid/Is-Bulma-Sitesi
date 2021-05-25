@@ -3,7 +3,9 @@ import { useState } from 'react';
 import update from 'immutability-helper';
 
 import Accrodion from '../../Elements/Accordion';
+
 import Technologies from './Technologies';
+import Level from './Level';
 
 export default function Filter() {
   const [accrodion, setAccrodion] = useState({
@@ -39,34 +41,8 @@ export default function Filter() {
   return (
     <section className="filter">
       <Accrodion>
-        <Technologies
-          open={accrodion.technologies}
-          click={() => handleAccrodion('technologies')}
-        />
-
-        <Accrodion.Group>
-          <Accrodion.Title
-            open={accrodion.level}
-            click={() => handleAccrodion('level')}
-          >
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
-              />
-            </svg>
-            <p>Experience level</p>
-          </Accrodion.Title>
-          <Accrodion.Content open={accrodion.level}>Content</Accrodion.Content>
-        </Accrodion.Group>
+        <Technologies />
+        <Level />
 
         <Accrodion.Group>
           <Accrodion.Title
