@@ -1,0 +1,15 @@
+.accrodion__title {
+  @apply p-3 flex items-center select-none cursor-pointer text-gray-800 hover:bg-gray-100;
+}
+
+.accrodion__title.open .accrodion__title--icon {
+  @apply transform rotate-180;
+}
+
+.accrodion__title--content {
+  @apply flex flex-1 items-center space-x-2 font-medium;
+}
+
+.accrodion__title--icon {
+  @apply w-4 h-4 transition ease-in-out;
+}
