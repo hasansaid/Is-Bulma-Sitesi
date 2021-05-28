@@ -1,5 +1,5 @@
-import './style.css';
+import './style.css'
 
 export default function Badge({ color, children }) {
-  return <span className={`badge badge-${color}`}>{children}</span>;
+  return <span className={`badge badge-${color}`}>{children}</span>
 }

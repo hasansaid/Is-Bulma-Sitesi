@@ -1,10 +1,10 @@
-import './style.css';
-import Job from './Job';
-import jobs from '../../../constants/jobs';
+import styles from './Jobs.module.css'
+import Job from './Job'
+import jobs from '../../../constants/jobs'
 
 export default function Jobs() {
   return (
-    <ul className="jobs-list">
+    <ul className={styles.jobs}>
       {jobs.map(job => (
         <Job
           key={job.id}
@@ -16,5 +16,5 @@ export default function Jobs() {
         />
       ))}
     </ul>
-  );
+  )
 }

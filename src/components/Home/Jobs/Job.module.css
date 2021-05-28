@@ -2,27 +2,27 @@
   @apply p-5 md:flex;
 }
 
-.job__content {
+.content {
   @apply flex-1 pr-5 md:w-10/12;
 }
 
-.job__title {
+.title {
   @apply text-xl font-semibold;
 }
 
-.job__title.immediate {
+.immediate {
   @apply text-red-500;
 }
 
-.job__location,
-.job__contract {
+.location,
+.contract {
   @apply flex items-center text-gray-600 space-x-1;
 }
 
-.job__remote {
+.remote {
   @apply text-yellow-600;
 }
 
-.job__actions {
+.actions {
   @apply flex mt-3 space-x-2 md:space-x-0 md:space-y-2 md:mt-0 md:flex-col md:w-2/12;
 }

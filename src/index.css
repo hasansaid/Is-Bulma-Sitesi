@@ -5,3 +5,7 @@
 body {
   @apply text-gray-900 bg-gray-50;
 }
+
+nav a.active {
+  @apply transition ease-in-out text-blue-500 bg-blue-50 hover:text-blue-600 hover:bg-blue-100;
+}

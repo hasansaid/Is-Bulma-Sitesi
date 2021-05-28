@@ -1,19 +1,19 @@
-import './style.css';
-import Button from '../../../Elements/Button';
-import Badge from '../../../Elements/Badge';
+import styles from './Job.module.css'
+import Button from '../../Elements/Button'
+import Badge from '../../Elements/Badge'
 
 export default function Job({ name, location, contract, remote, immediate }) {
-  const job_title_classes = ['job__title'];
-  if (immediate) job_title_classes.push('immediate');
+  const job_title_classes = [styles.title]
+  if (immediate) job_title_classes.push(styles.immediate)
 
   return (
-    <li className="job">
-      <div className="job__content">
+    <li className={styles.job}>
+      <div className={styles.content}>
         <h2 className={job_title_classes.join(' ')}>
           {name}
           {immediate && <Badge color="red">immediate</Badge>}
         </h2>
-        <div className="job__location">
+        <div className={styles.location}>
           <svg
             className="w-4 h-4"
             fill="none"
@@ -36,7 +36,7 @@ export default function Job({ name, location, contract, remote, immediate }) {
           </svg>
           <p>{location}</p>
         </div>
-        <div className="job__contract">
+        <div className={styles.contract}>
           <svg
             className="w-4 h-4"
             fill="none"
@@ -52,11 +52,11 @@ export default function Job({ name, location, contract, remote, immediate }) {
             />
           </svg>
           <p>
-            {contract} {remote && <span className="job__remote">Remote</span>}
+            {contract} {remote && <span className={styles.remote}>Remote</span>}
           </p>
         </div>
       </div>
-      <div className="job__actions">
+      <div className={styles.actions}>
         <Button block type="solid">
           Apply
         </Button>
@@ -65,5 +65,5 @@ export default function Job({ name, location, contract, remote, immediate }) {
         </Button>
       </div>
     </li>
-  );
+  )
 }

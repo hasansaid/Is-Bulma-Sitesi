@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1,
+    "name": "Frontend Engineer",
+    "location": "Tehran, Iran",
+    "contract": "Fulltime",
+    "remote": true,
+    "immediate": true,
+    "level": "Junior",
+    "status": "rejected",
+    "sendDate": "20 May, 2021"
+  },
+  {
+    "id": 2,
+    "name": "UI/UX Designer",
+    "location": "Mashhad, Iran",
+    "contract": "Fulltime",
+    "remote": true,
+    "immediate": true,
+    "level": "Junior",
+    "status": "seen",
+    "sendDate": "20 May, 2021"
+  },
+  {
+    "id": 3,
+    "name": "Node.js Developer",
+    "location": "Shiraz, Iran",
+    "contract": "Part time",
+    "remote": false,
+    "immediate": true,
+    "level": "Junior",
+    "status": "seen",
+    "sendDate": "20 May, 2021"
+  },
+  {
+    "id": 4,
+    "name": "Data Scientist",
+    "location": "Tabriz, Iran",
+    "contract": "Fulltime",
+    "remote": false,
+    "level": "Junior",
+    "status": "confirmed",
+    "sendDate": "20 May, 2021"
+  },
+  {
+    "id": 5,
+    "name": "Product Manager",
+    "location": "Ahvaz, Iran",
+    "contract": "Part time",
+    "remote": false,
+    "level": "Junior",
+    "status": "unseen",
+    "sendDate": "20 May, 2021"
+  }
+]

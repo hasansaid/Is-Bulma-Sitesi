@@ -1,7 +1,23 @@
 .badge {
-  @apply bg-white mx-2;
+  @apply bg-white mx-2 text-center;
+}
+
+.badge-green {
+  @apply text-white bg-green-500 border border-green-500 px-2 py-1 rounded-md text-sm;
 }
 
 .badge-red {
-  @apply text-white bg-red-500 px-2 py-1 rounded-md text-sm;
+  @apply text-white bg-red-500 border border-red-500 px-2 py-1 rounded-md text-sm;
+}
+
+.badge-blue {
+  @apply text-white bg-blue-500 border border-blue-500 px-2 py-1 rounded-md text-sm;
+}
+
+.badge-gray {
+  @apply text-gray-800 border border-gray-300 px-2 py-1 rounded-md text-sm;
+}
+
+.badge-light {
+  @apply text-gray-400 text-sm;
 }
