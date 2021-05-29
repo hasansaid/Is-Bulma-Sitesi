@@ -7,7 +7,7 @@ export default function Jobs() {
       {jobs
         .filter(job => job.saved)
         .map(job => (
-          <li className="p-5 md:flex">
+          <li key={job.id} className="p-5 md:flex">
             <div className="flex-1 pr-5 md:w-10/12">
               <h2 className="text-xl font-semibold">{job.name}</h2>
               <div className="flex items-center text-gray-600 space-x-1">
