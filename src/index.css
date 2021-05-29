@@ -9,3 +9,7 @@ body {
 nav a.active {
   @apply transition ease-in-out text-blue-500 bg-blue-50 hover:text-blue-600 hover:bg-blue-100;
 }
+
+#jobs li:not(:last-child) {
+  @apply border-b border-gray-100;
+}

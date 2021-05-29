@@ -26,11 +26,11 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/pinned"
+              to="/saved"
               activeClassName="active"
               className="inline-block rounded-md px-4 py-1 cursor-pointer select-none font-semibold text-gray-500 hover:text-gray-600"
             >
-              Pinned
+              Saved
             </NavLink>
           </li>
           <li>

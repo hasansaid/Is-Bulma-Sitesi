@@ -5,7 +5,8 @@
     "location": "Tehran, Iran",
     "contract": "Fulltime",
     "remote": true,
-    "immediate": true
+    "immediate": true,
+    "saved": true
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "location": "Mashhad, Iran",
     "contract": "Fulltime",
     "remote": true,
-    "immediate": true
+    "immediate": true,
+    "saved": false
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "location": "Shiraz, Iran",
     "contract": "Part time",
     "remote": false,
-    "immediate": true
+    "immediate": true,
+    "saved": true
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "location": "Tabriz, Iran",
     "contract": "Fulltime",
     "remote": false,
-    "immediate": false
+    "immediate": false,
+    "saved": true
   },
   {
     "id": 5,
@@ -37,6 +41,7 @@
     "location": "Ahvaz, Iran",
     "contract": "Part time",
     "remote": false,
-    "immediate": false
+    "immediate": false,
+    "saved": false
   }
 ]
