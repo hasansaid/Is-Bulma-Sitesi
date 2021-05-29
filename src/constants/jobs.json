@@ -6,7 +6,11 @@
     "contract": "Fulltime",
     "remote": true,
     "immediate": true,
-    "saved": true
+    "saved": true,
+    "applied": true,
+    "level": "Junior",
+    "status": "rejected",
+    "sendDate": "20 May, 2021"
   },
   {
     "id": 2,
@@ -15,7 +19,10 @@
     "contract": "Fulltime",
     "remote": true,
     "immediate": true,
-    "saved": false
+    "saved": false,
+    "level": "Junior",
+    "status": "seen",
+    "sendDate": "20 May, 2021"
   },
   {
     "id": 3,
@@ -24,7 +31,11 @@
     "contract": "Part time",
     "remote": false,
     "immediate": true,
-    "saved": true
+    "saved": true,
+    "applied": true,
+    "level": "Junior",
+    "status": "seen",
+    "sendDate": "20 May, 2021"
   },
   {
     "id": 4,
@@ -33,7 +44,11 @@
     "contract": "Fulltime",
     "remote": false,
     "immediate": false,
-    "saved": true
+    "saved": true,
+    "applied": true,
+    "level": "Junior",
+    "status": "confirmed",
+    "sendDate": "20 May, 2021"
   },
   {
     "id": 5,
@@ -42,6 +57,9 @@
     "contract": "Part time",
     "remote": false,
     "immediate": false,
-    "saved": false
+    "saved": false,
+    "level": "Junior",
+    "status": "unseen",
+    "sendDate": "20 May, 2021"
   }
 ]
