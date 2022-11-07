@@ -12,7 +12,7 @@ const Navbar = () => {
               activeClassName="active"
               className="inline-block rounded-md px-4 py-1 cursor-pointer select-none font-semibold text-gray-500 hover:text-gray-600"
             >
-              Jobs
+              İşler
             </NavLink>
           </li>
           <li>
@@ -21,7 +21,7 @@ const Navbar = () => {
               activeClassName="active"
               className="inline-block rounded-md px-4 py-1 cursor-pointer select-none font-semibold text-gray-500 hover:text-gray-600"
             >
-              Applied
+              Başvurulanlar
             </NavLink>
           </li>
           <li>
@@ -30,7 +30,7 @@ const Navbar = () => {
               activeClassName="active"
               className="inline-block rounded-md px-4 py-1 cursor-pointer select-none font-semibold text-gray-500 hover:text-gray-600"
             >
-              Saved
+              Kaydedilenler
             </NavLink>
           </li>
           <li>
@@ -39,7 +39,7 @@ const Navbar = () => {
               activeClassName="active"
               className="inline-block rounded-md px-4 py-1 cursor-pointer select-none font-semibold text-gray-500 hover:text-gray-600"
             >
-              Companies
+              Şirketler
             </NavLink>
           </li>
         </ul>

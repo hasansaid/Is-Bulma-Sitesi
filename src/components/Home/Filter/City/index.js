@@ -1,19 +1,40 @@
-import { useState } from 'react';
+import {useState, useEffect} from 'react';
 
 import Accrodion from '../../../Elements/Accordion';
 import Checkbox from '../../../Elements/Checkbox';
+import allJobs from '../../../../constants/jobs.json';
 
-export default function City() {
-  const [open, setOpen] = useState(true);
+export default function City({jobs, changeJobs}) {
+  const [open, setOpen] = useState (true);
 
-  const [tehran, setTehran] = useState(false);
-  const [esfahan, setEsfahan] = useState(false);
-  const [shiraz, setShiraz] = useState(false);
-  const [other, setOther] = useState(false);
+  const [tehran, setTehran] = useState (false);
+  const [esfahan, setEsfahan] = useState (false);
+  const [shiraz, setShiraz] = useState (false);
+  const [other, setOther] = useState (false);
+
+  const [cities, setCities] = useState ([]);
+
+  const filterJobs = () => {
+    let filteredJobs;
+    if (cities.length === 0) filteredJobs = allJobs;
+    else
+      filteredJobs = allJobs.filter (
+        job => cities.some (city => job.cities.includes (city)) === true
+      );
+
+    changeJobs (filteredJobs);
+  };
+
+  useEffect (
+    () => {
+      filterJobs ();
+    },
+    [cities]
+  );
 
   return (
     <Accrodion.Group>
-      <Accrodion.Title open={open} click={() => setOpen(!open)}>
+      <Accrodion.Title open={open} click={() => setOpen (!open)}>
         <svg
           className="w-4 h-4"
           fill="none"
@@ -40,22 +61,51 @@ export default function City() {
         <Checkbox
           label="Tehran"
           checked={tehran}
-          change={() => setTehran(!tehran)}
+          change={() => {
+            if (!tehran) {
+              let newCity = [...cities];
+              newCity.push ('Tehran');
+              setCities (newCity);
+            } else setCities (cities.filter (city => city !== 'Tehran'));
+            setTehran (!tehran);
+          }}
         />
         <Checkbox
           label="Esfahan"
           checked={esfahan}
-          change={() => setEsfahan(!esfahan)}
+          change={() => {
+            if (!esfahan) {
+              let newCity = [...cities];
+              newCity.push ('Esfahan');
+              setCities (newCity);
+            } else setCities (cities.filter (city => city !== 'Esfahan'));
+            setEsfahan (!esfahan);
+          }}
         />
         <Checkbox
           label="Shiraz"
           checked={shiraz}
-          change={() => setShiraz(!shiraz)}
+          change={() => {
+            if (!shiraz) {
+              let newCity = [...cities];
+              newCity.push ('Shiraz');
+              setCities (newCity);
+            } else setCities (cities.filter (city => city !== 'Shiraz'));
+
+            setShiraz (!shiraz);
+          }}
         />
         <Checkbox
           label="Other"
           checked={other}
-          change={() => setOther(!other)}
+          change={() => {
+            if (!other) {
+              let newCity = [...cities];
+              newCity.push ('Other');
+              setCities (newCity);
+            } else setCities (cities.filter (city => city !== 'Other'));
+            setOther (!other);
+          }}
         />
       </Accrodion.Content>
     </Accrodion.Group>

@@ -1,8 +1,7 @@
 import styles from './Jobs.module.css'
 import Job from './Job'
-import jobs from '../../../constants/jobs'
 
-export default function Jobs() {
+export default function Jobs({ jobs }) {
   return (
     <ul className={styles.jobs}>
       {jobs.map(job => (

@@ -4,12 +4,12 @@ const Subscribe = () => {
   return (
     <div className="bg-white shadow-sm p-3 rounded-md space-y-3">
       <p className="text-gray-600 leading-5">
-        Receive the latest
+        En son ilgili reklamları
         <br />
-        related ads by email.
+        email ile alın.
       </p>
       <Button block type="solid">
-        Subscribe
+        Abone Ol
       </Button>
     </div>
   )

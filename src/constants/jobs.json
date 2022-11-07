@@ -2,64 +2,95 @@
   {
     "id": 1,
     "name": "Frontend Engineer",
-    "location": "Tehran, Iran",
-    "contract": "Fulltime",
+    "location": "İstabul",
+    "contract": "Tam Zamanlı",
     "remote": true,
     "immediate": true,
     "saved": true,
     "applied": true,
     "level": "Junior",
     "status": "rejected",
-    "sendDate": "20 May, 2021"
+    "sendDate": "20 May, 2021",
+    "techs": ["frontend", "react", "javascript"]
   },
   {
     "id": 2,
     "name": "UI/UX Designer",
-    "location": "Mashhad, Iran",
-    "contract": "Fulltime",
+    "location": "Ankara",
+    "contract": "Tam Zamanlı",
     "remote": true,
     "immediate": true,
     "saved": false,
     "level": "Junior",
     "status": "seen",
-    "sendDate": "20 May, 2021"
+    "sendDate": "20 May, 2021",
+    "techs": ["frontend"]
   },
   {
     "id": 3,
     "name": "Node.js Developer",
-    "location": "Shiraz, Iran",
-    "contract": "Part time",
+    "location": "İstanbul",
+    "contract": "Yarı Zamanlı",
     "remote": false,
     "immediate": true,
     "saved": false,
     "applied": true,
     "level": "Junior",
     "status": "seen",
-    "sendDate": "20 May, 2021"
+    "sendDate": "20 May, 2021",
+    "techs": ["backend", "javascript"]
   },
   {
     "id": 4,
     "name": "Data Scientist",
-    "location": "Tabriz, Iran",
-    "contract": "Fulltime",
+    "location": "Ankara",
+    "contract": "Tam Zamanlı",
     "remote": false,
     "immediate": false,
     "saved": false,
     "applied": true,
     "level": "Junior",
     "status": "confirmed",
-    "sendDate": "20 May, 2021"
+    "sendDate": "20 May, 2021",
+    "techs": ["python", "linux"]
   },
   {
     "id": 5,
     "name": "Product Manager",
-    "location": "Ahvaz, Iran",
-    "contract": "Part time",
+    "location": "Bolu",
+    "contract": "Yarı Zamanlı",
     "remote": false,
     "immediate": false,
     "saved": false,
     "level": "Junior",
     "status": "unseen",
-    "sendDate": "20 May, 2021"
+    "sendDate": "20 May, 2021",
+    "techs": ["c#", "php"]
+  },
+  {
+    "id": 6,
+    "name": " Manager",
+    "location": "Bolu",
+    "contract": "Proje Bazlı",
+    "remote": false,
+    "immediate": false,
+    "saved": false,
+    "level": "Junior",
+    "status": "unseen",
+    "sendDate": "20 May, 2021",
+    "techs": ["linux"]
+  },
+  {
+    "id": 7,
+    "name": "Java Developer",
+    "location": "Bursa",
+    "contract": "Proje Bazlı",
+    "remote": false,
+    "immediate": false,
+    "saved": false,
+    "level": "Junior",
+    "status": "unseen",
+    "sendDate": "20 May, 2021",
+    "techs": ["java"]
   }
 ]
