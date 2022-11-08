@@ -51,17 +51,24 @@ export default function Jobs() {
                 <p>
                   {job.contract}{' '}
                   {job.remote && (
-                    <span className="text-yellow-600">Remote</span>
+                    <span className="text-yellow-600">Uzaktan</span>
                   )}
                 </p>
               </div>
             </div>
             <div className="flex mt-3 space-x-2 md:space-x-0 md:space-y-2 md:mt-0 md:flex-col md:w-2/12">
-              <Button block type="solid">
-                Apply
+              <Button
+                block
+                type="solid"
+                // onClick={() => {
+                //   document.getElementById('applyModalID').style.display = 'none'
+                //   window.location = '/applied'
+                // }}
+              >
+                Başvur
               </Button>
               <Button block type="outline">
-                {job.saved ? 'Saved' : 'Save'}
+                {job.saved ? 'Kaydedildi' : 'Kaydet'}
               </Button>
             </div>
           </li>

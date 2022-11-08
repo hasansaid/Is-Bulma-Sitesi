@@ -5,13 +5,13 @@ const Jobs = () => {
   const statusInfo = type => {
     switch (type) {
       case 'confirmed':
-        return { text: 'confirmed', color: 'green' }
+        return { text: 'Onaylandı', color: 'green' }
       case 'rejected':
-        return { text: 'rejected', color: 'red' }
+        return { text: 'Reddedildi', color: 'red' }
       case 'seen':
-        return { text: 'seen', color: 'blue' }
+        return { text: 'Görüldü', color: 'blue' }
       default:
-        return { text: 'unseen', color: 'gray' }
+        return { text: 'Görülmedi', color: 'gray' }
     }
   }
 
@@ -74,7 +74,7 @@ const Jobs = () => {
                   <p>
                     {job.contract}{' '}
                     {job.remote && (
-                      <span className="text-yellow-600">Remote</span>
+                      <span className="text-yellow-600">Uzaktan</span>
                     )}
                   </p>
                 </div>
@@ -111,7 +111,7 @@ const Jobs = () => {
                     />
                   </svg>
                   <a href="/" target="_blank">
-                    Visit resume file
+                    Cv Görüntüle
                   </a>
                 </div>
               </div>
