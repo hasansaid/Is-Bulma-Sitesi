@@ -1,7 +1,9 @@
 import React from 'react';
 import './styles.css';
-
+import {useHistory} from 'react-router-dom';
 const ApplyModal = ({appliedJob}) => {
+  let history = useHistory ();
+
   return (
     <div className="apply-modal-container" id="applyModalID">
       <div className="apply-modal-layout">
@@ -28,7 +30,7 @@ const ApplyModal = ({appliedJob}) => {
           <button
             onClick={() => {
               document.getElementById ('applyModalID').style.display = 'none';
-              window.location = '/applied';
+              history.push ('/applied');
             }}
           >
             Başvur

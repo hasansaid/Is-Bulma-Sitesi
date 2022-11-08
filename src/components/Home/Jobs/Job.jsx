@@ -2,6 +2,7 @@ import styles from './Job.module.css'
 import Button from '../../Elements/Button'
 import Badge from '../../Elements/Badge'
 import allJobs from '../../../constants/jobs.json'
+import { useHistory } from 'react-router-dom'
 
 export default function Job({
   changeAppliedJob,
@@ -14,6 +15,7 @@ export default function Job({
 }) {
   const job_title_classes = [styles.title]
   if (immediate) job_title_classes.push(styles.immediate)
+  let history = useHistory()
 
   return (
     <li className={styles.job}>
@@ -81,7 +83,7 @@ export default function Job({
           block
           type="outline"
           onClick={() => {
-            window.location = '/saved'
+            history.push('/saved')
           }}
         >
           Kaydet
