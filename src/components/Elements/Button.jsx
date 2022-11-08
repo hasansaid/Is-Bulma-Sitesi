@@ -1,4 +1,4 @@
-const Button = ({ type, block, children }) => {
+const Button = ({ type, block, children, onClick }) => {
   const classes = [
     'bg-white rounded-md select-none px-3 py-1 focus:outline-none',
   ]
@@ -19,7 +19,11 @@ const Button = ({ type, block, children }) => {
 
   if (block) classes.push('w-full')
 
-  return <button className={classes.join(' ')}>{children}</button>
+  return (
+    <button className={classes.join(' ')} onClick={onClick}>
+      {children}
+    </button>
+  )
 }
 
 export default Button

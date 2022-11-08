@@ -17,10 +17,7 @@ export default function City({jobs, changeJobs}) {
   const filterJobs = () => {
     let filteredJobs;
     if (cities.length === 0) filteredJobs = allJobs;
-    else
-      filteredJobs = allJobs.filter (
-        job => cities.some (city => job.cities.includes (city)) === true
-      );
+    else filteredJobs = allJobs.filter (job => cities.includes (job.location));
 
     changeJobs (filteredJobs);
   };
@@ -55,55 +52,55 @@ export default function City({jobs, changeJobs}) {
             d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
           />
         </svg>
-        <p>City</p>
+        <p>Şehirler</p>
       </Accrodion.Title>
       <Accrodion.Content open={open}>
         <Checkbox
-          label="Tehran"
+          label="İstanbul"
           checked={tehran}
           change={() => {
             if (!tehran) {
               let newCity = [...cities];
-              newCity.push ('Tehran');
+              newCity.push ('İstanbul');
               setCities (newCity);
-            } else setCities (cities.filter (city => city !== 'Tehran'));
+            } else setCities (cities.filter (city => city !== 'İstanbul'));
             setTehran (!tehran);
           }}
         />
         <Checkbox
-          label="Esfahan"
+          label="Ankara"
           checked={esfahan}
           change={() => {
             if (!esfahan) {
               let newCity = [...cities];
-              newCity.push ('Esfahan');
+              newCity.push ('Ankara');
               setCities (newCity);
-            } else setCities (cities.filter (city => city !== 'Esfahan'));
+            } else setCities (cities.filter (city => city !== 'Ankara'));
             setEsfahan (!esfahan);
           }}
         />
         <Checkbox
-          label="Shiraz"
+          label="Bolu"
           checked={shiraz}
           change={() => {
             if (!shiraz) {
               let newCity = [...cities];
-              newCity.push ('Shiraz');
+              newCity.push ('Bolu');
               setCities (newCity);
-            } else setCities (cities.filter (city => city !== 'Shiraz'));
+            } else setCities (cities.filter (city => city !== 'Bolu'));
 
             setShiraz (!shiraz);
           }}
         />
         <Checkbox
-          label="Other"
+          label="Bursa"
           checked={other}
           change={() => {
             if (!other) {
               let newCity = [...cities];
-              newCity.push ('Other');
+              newCity.push ('Bursa');
               setCities (newCity);
-            } else setCities (cities.filter (city => city !== 'Other'));
+            } else setCities (cities.filter (city => city !== 'Bursa'));
             setOther (!other);
           }}
         />

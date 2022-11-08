@@ -1,0 +1,80 @@
+.apply-modal-container {
+  position: fixed;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.apply-modal-layout {
+  background-color: rgb(21, 70, 134);
+  padding: 20px;
+  width: 300px;
+}
+
+.a-m-job-header {
+  text-align: center;
+  font-size: 2em;
+}
+
+.a-m-job-details {
+  margin-top: 5px;
+  font-size: 0.7em;
+  color: black;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: fit-content;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.a-m-job-content {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+.a-m-resume-container {
+  margin: 20px;
+  margin-left: 0;
+  margin-top: 40px;
+  font-size: 0.8em;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 15px;
+  width: fit-content;
+}
+
+.a-m-apply-button {
+  display: flex;
+  justify-content: center;
+}
+
+.a-m-apply-button button {
+  background-color: rgb(109, 167, 218);
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin: 7px;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.inputfile + label {
+  background-color: rgb(210, 226, 241);
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin-left: 10px;
+  color: black;
+}

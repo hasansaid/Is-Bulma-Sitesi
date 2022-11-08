@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Frontend Engineer",
-    "location": "İstabul",
+    "location": "İstanbul",
     "contract": "Tam Zamanlı",
     "remote": true,
     "immediate": true,
@@ -86,7 +86,7 @@
     "location": "Bursa",
     "contract": "Proje Bazlı",
     "remote": false,
-    "immediate": false,
+    "immediate": true,
     "saved": false,
     "level": "Junior",
     "status": "unseen",

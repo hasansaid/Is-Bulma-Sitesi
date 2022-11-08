@@ -1,13 +1,13 @@
-import Content from '../components/Elements/Content'
-import Layout from '../components/Elements/Layout'
-import Sidebar from '../components/Elements/Sidebar'
+import Content from '../components/Elements/Content';
+import Layout from '../components/Elements/Layout';
+import Sidebar from '../components/Elements/Sidebar';
 
-import List from '../components/Companies/List'
-import Requests from '../components/Companies/Requests'
+import List from '../components/Companies/List';
+import Requests from '../components/Companies/Requests';
 
-export default function Companies() {
+export default function Companies({userActive, changeUserActive}) {
   return (
-    <Layout flex>
+    <Layout userActive={userActive} changeUserActive={changeUserActive} flex>
       <Sidebar>
         <Requests />
       </Sidebar>
@@ -15,5 +15,5 @@ export default function Companies() {
         <List />
       </Content>
     </Layout>
-  )
+  );
 }

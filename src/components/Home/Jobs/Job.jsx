@@ -1,8 +1,17 @@
 import styles from './Job.module.css'
 import Button from '../../Elements/Button'
 import Badge from '../../Elements/Badge'
+import allJobs from '../../../constants/jobs.json'
 
-export default function Job({ name, location, contract, remote, immediate }) {
+export default function Job({
+  changeAppliedJob,
+  id,
+  name,
+  location,
+  contract,
+  remote,
+  immediate,
+}) {
   const job_title_classes = [styles.title]
   if (immediate) job_title_classes.push(styles.immediate)
 
@@ -11,7 +20,7 @@ export default function Job({ name, location, contract, remote, immediate }) {
       <div className={styles.content}>
         <h2 className={job_title_classes.join(' ')}>
           {name}
-          {immediate && <Badge color="red">immediate</Badge>}
+          {immediate && <Badge color="red">Acil</Badge>}
         </h2>
         <div className={styles.location}>
           <svg
@@ -52,16 +61,30 @@ export default function Job({ name, location, contract, remote, immediate }) {
             />
           </svg>
           <p>
-            {contract} {remote && <span className={styles.remote}>Remote</span>}
+            {contract}{' '}
+            {remote && <span className={styles.remote}>Uzaktan</span>}
           </p>
         </div>
       </div>
       <div className={styles.actions}>
-        <Button block type="solid">
-          Apply
+        <Button
+          block
+          type="solid"
+          onClick={() => {
+            document.getElementById('applyModalID').style.display = 'flex'
+            changeAppliedJob(allJobs.filter(job => job.id == id)[0])
+          }}
+        >
+          Başvur
         </Button>
-        <Button block type="outline">
-          Save
+        <Button
+          block
+          type="outline"
+          onClick={() => {
+            window.location = '/saved'
+          }}
+        >
+          Kaydet
         </Button>
       </div>
     </li>

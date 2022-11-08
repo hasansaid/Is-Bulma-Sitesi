@@ -4,7 +4,7 @@ export default function Requests() {
   return (
     <section className="bg-white shadow-sm p-3 rounded-md space-y-3">
       <div className="space-y-1">
-        <h3 className="text-lg font-semibold">My Requests</h3>
+        <h3 className="text-lg font-semibold">Pozisyonlar </h3>
         <hr className="divider" />
         <ul className="space-y-2">
           {jobs
@@ -21,11 +21,11 @@ export default function Requests() {
           href="/"
           className="mt-2 inline-block text-blue-500 hover:text-blue-600"
         >
-          View all
+          Tüm Pozisyonları Göster
         </a>
       </div>
       <div className="space-y-1">
-        <h3 className="text-lg font-semibold">My Requests</h3>
+        <h3 className="text-lg font-semibold">Benim Pozisyonum</h3>
         <hr className="divider" />
         <ul className="space-y-2">
           {jobs

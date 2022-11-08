@@ -57,7 +57,7 @@ export default function List() {
             </div>
             <div className="flex items-center space-x-1 text-gray-600">
               <p className="text-sm">
-                {`${company.size[0]} - ${company.size[1]} people`}
+                {`${company.size[0]} - ${company.size[1]} çalışan`}
               </p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

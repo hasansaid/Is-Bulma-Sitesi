@@ -3,8 +3,8 @@
     "id": 1,
     "username": "yektanet",
     "name": "YektaNet",
-    "description": "The largest online advertising platform in Iran",
-    "city": "Tehran",
+    "description": "Reklam platformu",
+    "city": "İstanbul",
     "size": [201, 500],
     "logoImg": "yektanet-logo.png",
     "bgImg": "yektanet-bg.jpg"
@@ -13,8 +13,8 @@
     "id": 2,
     "username": "quera",
     "name": "Quera",
-    "description": "Assess programming skills, online classes",
-    "city": "Tehran",
+    "description": "Programlama becerilerini, çevrimiçi sınıfları değerlendirin",
+    "city": "Ankara",
     "size": [50, 200],
     "logoImg": "quera-logo.png",
     "bgImg": "quera-bg.jpg"
@@ -23,8 +23,8 @@
     "id": 3,
     "username": "sahab",
     "name": "Sahab",
-    "description": "Data-driven solutions",
-    "city": "Tehran",
+    "description": "Veri odaklı çözümler",
+    "city": "Bolu",
     "size": [50, 200],
     "logoImg": "sahab-logo.png",
     "bgImg": "sahab-bg.jpg"
@@ -33,8 +33,8 @@
     "id": 4,
     "username": "systemgroup",
     "name": "System Group",
-    "description": "The largest collection of knowledge-based in the country in the field of software production",
-    "city": "Tehran",
+    "description": "Yazılım üretimi alanında ülkedeki en büyük bilgi tabanlı koleksiyon",
+    "city": "Bursa",
     "size": [1001, 5000],
     "logoImg": "systemgroup-logo.png",
     "bgImg": "systemgroup-bg.jpg"
