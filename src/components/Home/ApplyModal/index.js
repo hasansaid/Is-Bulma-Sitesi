@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 import {useHistory} from 'react-router-dom';
-const ApplyModal = ({appliedJob}) => {
+const ApplyModal = ({appliedJob, userActive}) => {
   let history = useHistory ();
 
   return (
@@ -30,6 +30,11 @@ const ApplyModal = ({appliedJob}) => {
           <button
             onClick={() => {
               document.getElementById ('applyModalID').style.display = 'none';
+
+              if (!userActive) {
+                history.push ('/login');
+                return;
+              }
               history.push ('/applied');
             }}
           >

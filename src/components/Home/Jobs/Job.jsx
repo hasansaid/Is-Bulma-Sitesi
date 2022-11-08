@@ -5,6 +5,7 @@ import allJobs from '../../../constants/jobs.json'
 import { useHistory } from 'react-router-dom'
 
 export default function Job({
+  userActive,
   changeAppliedJob,
   id,
   name,
@@ -83,6 +84,10 @@ export default function Job({
           block
           type="outline"
           onClick={() => {
+            if (!userActive) {
+              history.push('/login')
+              return
+            }
             history.push('/saved')
           }}
         >

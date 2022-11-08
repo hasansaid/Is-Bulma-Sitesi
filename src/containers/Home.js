@@ -23,14 +23,14 @@ export default function Home ({userActive, changeUserActive}) {
 
   return (
     <>
-    <ApplyModal appliedJob={appliedJob} />
+    <ApplyModal userActive={userActive} appliedJob={appliedJob} />
       <Layout userActive={userActive} changeUserActive={changeUserActive} flex>
         <Sidebar>
           <Subscribe />
           <Filter  jobs={jobs} changeJobs={changeJobs} />
         </Sidebar>
         <Content>
-          <Jobs changeAppliedJob={changeAppliedJob} jobs={jobs} changeJobs={changeJobs} />
+          <Jobs userActive={userActive} changeAppliedJob={changeAppliedJob} jobs={jobs} changeJobs={changeJobs} />
         </Content>
       </Layout>
     </>
