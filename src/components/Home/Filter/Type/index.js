@@ -2,7 +2,8 @@ import {useState, useEffect} from 'react';
 
 import Accrodion from '../../../Elements/Accordion';
 import Checkbox from '../../../Elements/Checkbox';
-import allJobs from '../../../../constants/jobs.json';
+// import allJobs from '../../../../constants/jobs.json';
+import {fetchJobs} from '../../../../common';
 
 export default function Type({jobs, changeJobs}) {
   const [open, setOpen] = useState (true);
@@ -13,7 +14,8 @@ export default function Type({jobs, changeJobs}) {
 
   const [types, setTypes] = useState ([]);
 
-  const filterJobs = () => {
+  const filterJobs = async () => {
+    let allJobs = await fetchJobs ();
     let filteredJobs;
     if (types.length === 0) filteredJobs = allJobs;
     else

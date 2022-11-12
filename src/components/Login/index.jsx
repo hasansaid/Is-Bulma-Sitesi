@@ -2,6 +2,9 @@ import React from 'react'
 import './styles.css'
 import { Formik } from 'formik'
 import { useHistory } from 'react-router-dom'
+import { useState } from 'react'
+import { login } from '../../common'
+import db from '@yusuf-yeniceri/easy-storage'
 
 const Login = ({ changeUserActive }) => {
   let history = useHistory()
@@ -27,14 +30,23 @@ const Login = ({ changeUserActive }) => {
           }
           return errors
         }}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2))
-            changeUserActive()
+        onSubmit={async (values, { setSubmitting }) => {
+          alert(JSON.stringify(values, null, 2))
 
+          let result = await login({
+            email: values.email,
+            password: values.password,
+          }) //email ve şifre ile giriş
+
+          if (result.token !== undefined) {
+            db.ref('jwt_token').set(result.token)
+            db.ref('fullname').set(result.fullName)
+            db.ref('position').set(result.position)
+
+            changeUserActive()
             history.push('/applied')
-            setSubmitting(false)
-          }, 400)
+          }
+          setSubmitting(false)
         }}
       >
         {({

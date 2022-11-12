@@ -2,6 +2,7 @@ import React from 'react'
 import './styles.css'
 import { Formik } from 'formik'
 import { useHistory } from 'react-router-dom'
+import { signup } from '../../common'
 
 const Signup = () => {
   let history = useHistory()
@@ -27,13 +28,19 @@ const Signup = () => {
           }
           return errors
         }}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2))
-            setSubmitting(false)
+        onSubmit={async (values, { setSubmitting }) => {
+          alert(JSON.stringify(values, null, 2))
+          setSubmitting(false)
 
+          let result = await signup({
+            FullName: values.fullname,
+            Position: values.position,
+            Email: values.email,
+            Password: values.password,
+          })
+          if (result === 200) {
             history.push('/login')
-          }, 400)
+          }
         }}
       >
         {({

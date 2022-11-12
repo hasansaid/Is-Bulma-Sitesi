@@ -2,7 +2,8 @@ import {useState, useEffect} from 'react';
 
 import Accrodion from '../../../Elements/Accordion';
 import Checkbox from '../../../Elements/Checkbox';
-import allJobs from '../../../../constants/jobs.json';
+// import allJobs from '../../../../constants/jobs.json';
+import {fetchJobs} from '../../../../common';
 
 export default function Technologies({jobs, changeJobs}) {
   const [open, setOpen] = useState (true);
@@ -20,8 +21,14 @@ export default function Technologies({jobs, changeJobs}) {
 
   const [techs, setTechs] = useState ([]);
 
-  const filterJobs = () => {
+  //api bağlantı teknolojiler
+  const filterJobs = async () => {
     let filteredJobs;
+    let allJobs = await fetchJobs ();
+    allJobs = allJobs.map (job => {
+      job.techs = job.techs.map (tech => tech.name);
+      return job;
+    });
     if (techs.length === 0) filteredJobs = allJobs;
     else
       filteredJobs = allJobs.filter (
@@ -32,8 +39,8 @@ export default function Technologies({jobs, changeJobs}) {
   };
 
   useEffect (
-    () => {
-      filterJobs ();
+    async () => {
+      await filterJobs ();
     },
     [techs]
   );

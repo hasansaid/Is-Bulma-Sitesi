@@ -1,8 +1,9 @@
 import styles from './Job.module.css'
 import Button from '../../Elements/Button'
 import Badge from '../../Elements/Badge'
-import allJobs from '../../../constants/jobs.json'
+import { fetchJobs } from '../../../common'
 import { useHistory } from 'react-router-dom'
+import { useEffect } from 'react'
 
 export default function Job({
   userActive,
@@ -17,6 +18,12 @@ export default function Job({
   const job_title_classes = [styles.title]
   if (immediate) job_title_classes.push(styles.immediate)
   let history = useHistory()
+
+  // //api bağlantı noktası
+  // useEffect(async () => {
+  //   let result = await fetchJobs()
+  //   console.log(result)
+  // }, [])
 
   return (
     <li className={styles.job}>
@@ -73,9 +80,10 @@ export default function Job({
         <Button
           block
           type="solid"
-          onClick={() => {
+          onClick={async () => {
             document.getElementById('applyModalID').style.display = 'flex'
-            changeAppliedJob(allJobs.filter(job => job.id == id)[0])
+            let allJobs = await fetchJobs()
+            changeAppliedJob(allJobs.filter(job => job.id == id)[0]) // bu kısım bir işi, açılan pencereye yüklemek için, state'e atar, başvur ekranı
           }}
         >
           Başvur

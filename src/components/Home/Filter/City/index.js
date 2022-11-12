@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 
 import Accrodion from '../../../Elements/Accordion';
 import Checkbox from '../../../Elements/Checkbox';
-import allJobs from '../../../../constants/jobs.json';
+import {fetchJobs} from '../../../../common';
 
 export default function City({jobs, changeJobs}) {
   const [open, setOpen] = useState (true);
@@ -14,17 +14,23 @@ export default function City({jobs, changeJobs}) {
 
   const [cities, setCities] = useState ([]);
 
-  const filterJobs = () => {
-    let filteredJobs;
-    if (cities.length === 0) filteredJobs = allJobs;
-    else filteredJobs = allJobs.filter (job => cities.includes (job.location));
+  const filterJobs = async () => {
+    try {
+      let allJobs = await fetchJobs ();
+      let filteredJobs;
+      if (cities.length === 0) filteredJobs = allJobs;
+      else
+        filteredJobs = allJobs.filter (job => cities.includes (job.location));
 
-    changeJobs (filteredJobs);
+      changeJobs (filteredJobs);
+    } catch (error) {
+      alert ('api hata verdi, lütfen tekrar deneyin!');
+    }
   };
 
   useEffect (
-    () => {
-      filterJobs ();
+    async () => {
+      await filterJobs ();
     },
     [cities]
   );
