@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Bu dosya, Web projenizin yayımlama/paket işlemi tarafından kullanılıyor. MSBuild dosyasını düzenleyerek
+bu işlemin davranışını düzenleyebilirsiniz. Bununla ilgili daha fazla bilgi edinmek için https://go.microsoft.com/fwlink/?LinkID=208121 adresini ziyaret edin. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA2/l3GDBMW0S1VTBNN5aTgQAAAAACAAAAAAAQZgAAAAEAACAAAABgp10v6CAU4bGNzJm3Uk8t7kw1JWPnOdIhxItp3dvWWwAAAAAOgAAAAAIAACAAAAChca0vhxSgG4GOGaZT3FNqvzb4cmy+aenVQXC+SE4mloAAAAAjRpr4Wx4Xpd1nvZA5e3qAEYmgprar+hy2zhUoO9WyB67z9tn5FaxsygxKkF0DNkstZYN6Oz1BIBINdcNwG5izeEKR2w1+KNNqzaYDq6DyWMOPZm4uJCBnv6Naj41BjS7Te4hpsenoF91hQEN85mGGxJvFVYDT1U5/H5vHPkM7U0AAAAC1pbDxLUhJXXdazBtf2tnDXw1F4kXwPeRAKJvfCjXmqMEbY2kwMzmeibiIDoMEX4O8iFetdo4H5EXAOVpDjXuR</EncryptedPassword>
+    <History>True|2022-11-28T21:00:15.0109921Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="api.Models.apiDbContext">
+      <Value>Data Source=tcp:isapi.database.windows.net,1433%3bInitial Catalog=isapiDatabase%3bUser Id=hasan%40isapi%3bPassword=Yusufdb123.</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
